@@ -1,6 +1,11 @@
 @import 'tailwindcss';
-@import 'fumadocs-ui/css/black.css';
+@import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
+
+aside {
+  background-color: var(--color-fd-background);
+  border-color: var(--color-fd-background);
+}
 
 html {
   scrollbar-gutter: stable;

@@ -4,6 +4,7 @@ import { appName, gitConfig } from './shared';
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
+      enabled: true,
       // JSX supported
       title: appName,
     },
