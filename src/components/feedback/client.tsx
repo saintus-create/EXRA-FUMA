@@ -1,7 +1,5 @@
 'use client';
-import { cn } from '../../lib/cn';
-import { autoUpdate, flip, offset, shift, useFloating } from '@floating-ui/react-dom';
-import { buttonVariants } from '../ui/button';
+
 import { CornerDownRightIcon, ThumbsDown, ThumbsUp } from 'lucide-react';
 import {
   type HTMLAttributes,
@@ -13,8 +11,10 @@ import {
   useState,
   useTransition,
 } from 'react';
-import { Collapsible, CollapsibleContent } from '../ui/collapsible';
+import { autoUpdate, flip, offset, shift, useFloating } from '@floating-ui/react-dom';
+import { usePathname } from 'fumadocs-core/framework';
 import { cva } from 'class-variance-authority';
+import { z } from 'zod/mini';
 import {
   actionResponse,
   blockFeedback,
@@ -22,9 +22,10 @@ import {
   type ActionResponse,
   type BlockFeedback,
   type PageFeedback,
-} from './schema';
-import { z } from 'zod/mini';
-import { usePathname } from 'fumadocs-core/framework';
+} from '@/components/feedback/schema';
+import { Collapsible, CollapsibleContent } from '@/components/ui/collapsible';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/cn';
 
 const rateButtonVariants = cva(
   'inline-flex items-center gap-2 px-3 py-2 rounded-full font-medium border text-sm [&_svg]:size-4 disabled:cursor-not-allowed',

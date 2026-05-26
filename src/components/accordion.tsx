@@ -2,18 +2,18 @@
 
 import { Check, LinkIcon } from 'lucide-react';
 import { type ComponentProps, type ReactNode, useEffect, useRef, useState } from 'react';
-import { cn } from '../lib/cn';
-import { useCopyButton } from 'fumadocs-ui/utils/use-copy-button';
-import { buttonVariants } from './ui/button';
-import { mergeRefs } from '../lib/merge-refs';
 import { useTranslations } from 'fumadocs-ui/contexts/i18n';
+import { useCopyButton } from 'fumadocs-ui/utils/use-copy-button';
 import {
   Accordion as Root,
   AccordionContent,
   AccordionHeader,
   AccordionItem,
   AccordionTrigger,
-} from './ui/accordion';
+} from '@/components/ui/accordion';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/cn';
+import { mergeRefs } from '@/lib/merge-refs';
 
 export function Accordions({
   type = 'single',

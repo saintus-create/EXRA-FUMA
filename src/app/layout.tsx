@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: '%s | ADHD Safety Hub',
   },
   description:
-    'Independent analysis of 169,640 FDA FAERS reports showing ADHD medications have a 4x safety advantage over the average drug. 105 peer-reviewed studies. 25 countries.',
+    'Independent analysis of 169,640 FDA FAERS reports showing ADHD medications have a 4x safety advantage over the average drug. 300+ peer-reviewed studies. 33 countries.',
 };
 
 export default function Layout({ children }: LayoutProps<'/'>) {

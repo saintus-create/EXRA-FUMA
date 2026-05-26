@@ -1,4 +1,5 @@
 'use client';
+
 import { ChevronDown, ExternalLink } from 'lucide-react';
 import {
   type ComponentProps,
@@ -14,20 +15,20 @@ import {
 } from 'react';
 import Link, { type LinkProps } from 'fumadocs-core/link';
 import { useOnChange } from 'fumadocs-core/utils/use-on-change';
-import { cn } from '../../lib/cn';
+import { useMediaQuery } from 'fumadocs-core/utils/use-media-query';
+import { usePathname } from 'fumadocs-core/framework';
+import { useTranslations } from 'fumadocs-ui/contexts/i18n';
+import { Presence } from '@radix-ui/react-presence';
+import scrollIntoView from 'scroll-into-view-if-needed';
 import {
   Collapsible,
   CollapsibleContent,
   type CollapsibleContentProps,
   CollapsibleTrigger,
   type CollapsibleTriggerProps,
-} from '../ui/collapsible';
-import { useMediaQuery } from 'fumadocs-core/utils/use-media-query';
-import { Presence } from '@radix-ui/react-presence';
-import scrollIntoView from 'scroll-into-view-if-needed';
-import { usePathname } from 'fumadocs-core/framework';
-import { ScrollArea, ScrollViewport } from '../ui/scroll-area';
-import { useTranslations } from 'fumadocs-ui/contexts/i18n';
+} from '@/components/ui/collapsible';
+import { ScrollArea, ScrollViewport } from '@/components/ui/scroll-area';
+import { cn } from '@/lib/cn';
 
 interface SidebarContext {
   open: boolean;

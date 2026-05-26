@@ -1,6 +1,6 @@
-import { cn } from '../lib/cn';
 import { GitFork, Star } from 'lucide-react';
 import { type ComponentProps, use } from 'react';
+import { cn } from '@/lib/cn';
 
 export interface FetchRepositoryInfoOptions {
   owner: string;

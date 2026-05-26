@@ -13,8 +13,8 @@ export default function HomePage() {
       </h1>
       <p className="text-lg text-fd-muted-foreground max-w-xl mb-8">
         ADHD medications are suspected as a cause in only 25% of adverse event
-        reports — vs. ~100% for the average drug. 105 peer-reviewed studies.
-        25 countries. Managed care decision-makers deserve this data.
+        reports — versus ~100% for the average drug. 300+ peer-reviewed studies.
+        33 countries. Managed care decision-makers deserve this data.
       </p>
       <div className="flex gap-3 flex-wrap justify-center mb-16">
         <Link
@@ -36,7 +36,7 @@ export default function HomePage() {
           { value: '4x', label: 'Safety advantage', sub: 'vs. average drug' },
           { value: '75.2%', label: 'Concomitant rate', sub: 'not suspected as cause' },
           { value: '0.79%', label: 'FAERS share', sub: 'of 169,640 total reports' },
-          { value: '105', label: 'Studies reviewed', sub: 'across 25 countries' },
+          { value: '300+', label: 'Studies reviewed', sub: 'across 33 countries' },
         ].map((s) => (
           <div
             key={s.label}
@@ -61,7 +61,7 @@ export default function HomePage() {
           },
           {
             title: 'Global Consistency',
-            body: 'Safety and efficacy findings hold across 25 countries from 2004–2025 — not an artifact of any single healthcare system.',
+            body: 'Safety and efficacy findings hold across 33 countries from 2004–2026 — not an artifact of any single healthcare system.',
           },
           {
             title: 'Transparent Methodology',
@@ -81,7 +81,7 @@ export default function HomePage() {
       <div className="mt-16 border-t border-fd-border pt-8 max-w-2xl w-full text-center">
         <p className="text-xs text-fd-muted-foreground mb-3">Full documentation</p>
         <p className="text-lg font-bold mb-2">
-          FDA data. 105 studies. 25 countries.
+          FDA data. 300+ studies. 33 countries.
         </p>
         <p className="text-sm text-fd-muted-foreground mb-4">
           Clinical review, methodology, and full study library.

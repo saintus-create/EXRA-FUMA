@@ -1,12 +1,12 @@
 'use client';
 
-import { type HTMLAttributes, useEffect, useState } from 'react';
 import { X } from 'lucide-react';
-import { cn } from '../lib/cn';
-import { buttonVariants } from './ui/button';
+import { type HTMLAttributes, useEffect, useState } from 'react';
 import { useTranslations } from 'fumadocs-ui/contexts/i18n';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/cn';
 
-type BannerVariant = 'rainbow' | 'normal';
+export type BannerVariant = 'rainbow' | 'normal';
 
 export function Banner({
   id,

@@ -1,4 +1,6 @@
 'use client';
+
+import { Loader2, MessageCircleIcon, RefreshCw, SearchIcon, Send, X } from 'lucide-react';
 import {
   type ComponentProps,
   createContext,
@@ -11,14 +13,13 @@ import {
   useRef,
   useState,
 } from 'react';
-import { Loader2, MessageCircleIcon, RefreshCw, SearchIcon, Send, X } from 'lucide-react';
-import { cn } from '../../lib/cn';
-import { buttonVariants } from '../ui/button';
 import { useChat, type UseChatHelpers } from '@ai-sdk/react';
 import { DefaultChatTransport, type Tool, type UIToolInvocation } from 'ai';
-import { Markdown } from '../markdown';
 import { Presence } from '@radix-ui/react-presence';
-import type { ChatUIMessage, SearchTool } from '../../app/api/chat/route';
+import type { ChatUIMessage, SearchTool } from '@/app/api/chat/route';
+import { Markdown } from '@/components/markdown';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/cn';
 
 const Context = createContext<{
   open: boolean;
