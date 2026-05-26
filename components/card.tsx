@@ -27,13 +27,13 @@ export function Card({ icon, title, description, ...props }: CardProps) {
       {...props}
       data-card
       className={cn(
-        'block rounded-xl border bg-fd-card p-4 text-fd-card-foreground transition-colors @max-lg:col-span-full',
+        'block rounded-xl bg-fd-card p-4 text-fd-card-foreground transition-colors @max-lg:col-span-full',
         props.href && 'hover:bg-fd-accent/80',
         props.className,
       )}
     >
       {icon ? (
-        <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-fd-muted p-1.5 text-fd-muted-foreground [&_svg]:size-4">
+        <div className="not-prose mb-2 w-fit shadow-md rounded-lg bg-fd-muted p-1.5 text-fd-muted-foreground [&_svg]:size-4">
           {icon}
         </div>
       ) : null}
