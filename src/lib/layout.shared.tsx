@@ -8,6 +8,20 @@ export function baseOptions(): BaseLayoutProps {
       // JSX supported
       title: appName,
     },
+    links: [
+      {
+        text: 'Safety Data',
+        url: '/docs/safety-data',
+      },
+      {
+        text: 'Studies',
+        url: '/docs/studies',
+      },
+      {
+        text: 'Prescribing',
+        url: '/docs/prescribing-context',
+      },
+    ],
     githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
   };
 }
