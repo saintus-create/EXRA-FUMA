@@ -9,17 +9,17 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'ADHD Safety Hub — FDA FAERS Clinical Review',
-    template: '%s | ADHD Safety Hub',
+    default: 'ADHD',
+    template: '%s | ADHD',
   },
   description:
-    'Independent analysis of 169,640 FDA FAERS reports showing ADHD medications have a 4x safety advantage over the average drug. 300+ peer-reviewed studies. 33 countries.',
+    'FDA FAERS clinical review and pharmacovigilance data analysis.',
 };
 
 export default function Layout({ children }: LayoutProps<'/'>) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
+      <body className="dark flex flex-col min-h-screen">
         <RootProvider>{children}</RootProvider>
       </body>
     </html>

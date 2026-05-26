@@ -43,7 +43,7 @@ export function Header(props: ComponentProps<'header'>) {
         props.className,
       )}
     >
-      <div data-header-body="" className="flex border-b px-4 gap-2 h-14 md:px-6">
+      <div data-header-body="" className="flex px-4 gap-2 h-14 md:px-6">
         <div
           className={cn(
             'items-center',
@@ -79,7 +79,7 @@ export function Header(props: ComponentProps<'header'>) {
             hideIfDisabled
             className={cn(
               'w-full my-auto max-md:hidden',
-              navMode === 'top' ? 'ps-2.5 rounded-xl max-w-sm' : 'max-w-[240px]',
+              navMode === 'top' ? 'ps-2.5 rounded-md max-w-sm' : 'max-w-[240px]',
             )}
           />
         )}
@@ -150,7 +150,7 @@ export function Header(props: ComponentProps<'header'>) {
       {showLayoutTabs && (
         <LayoutHeaderTabs
           data-header-tabs=""
-          className="overflow-x-auto border-b px-6 h-10 max-lg:hidden"
+          className="overflow-x-auto px-6 h-10 max-lg:hidden"
           tabs={tabs}
         />
       )}
@@ -181,9 +181,9 @@ function LayoutHeaderTabs({
             key={i}
             href={url}
             className={cn(
-              'inline-flex border-b-2 border-transparent transition-colors items-center pb-1.5 font-medium gap-2 text-fd-muted-foreground text-sm text-nowrap hover:text-fd-accent-foreground',
+              'inline-flex transition-colors items-center pb-1.5 font-medium gap-2 text-fd-muted-foreground text-sm text-nowrap hover:text-fd-accent-foreground',
               unlisted && !isSelected && 'hidden',
-              isSelected && 'border-fd-primary text-fd-primary',
+              isSelected && 'text-fd-primary',
               className,
             )}
             {...rest}

@@ -7,12 +7,12 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import { cn } from '@/lib/cn';
 
 const itemVariants = cva(
-  'flex flex-row items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-fd-accent hover:text-fd-accent-foreground [&_svg]:size-4',
+  'flex flex-row items-center gap-2 rounded-sm px-2 py-1.5 text-sm hover:bg-fd-accent hover:text-fd-accent-foreground [&_svg]:size-4',
 );
 
 export function Files({ className, ...props }: HTMLAttributes<HTMLDivElement>): React.ReactElement {
   return (
-    <div className={cn('not-prose rounded-md border bg-fd-card p-2', className)} {...props}>
+    <div className={cn('not-prose rounded-sm bg-fd-card p-2', className)} {...props}>
       {props.children}
     </div>
   );
@@ -60,7 +60,7 @@ export function Folder({ name, defaultOpen = false, ...props }: FolderProps): Re
         {name}
       </CollapsibleTrigger>
       <CollapsibleContent>
-        <div className="ms-2 flex flex-col border-l ps-2">{props.children}</div>
+        <div className="ms-2 flex flex-col ps-2">{props.children}</div>
       </CollapsibleContent>
     </Collapsible>
   );

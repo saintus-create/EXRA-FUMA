@@ -18,7 +18,7 @@ export function InlineTOC({ items, ...props }: InlineTocProps) {
     <Collapsible
       {...props}
       className={cn(
-        'not-prose rounded-lg border bg-fd-card text-fd-card-foreground',
+        'not-prose rounded-md bg-fd-card text-fd-card-foreground',
         props.className,
       )}
     >
@@ -32,7 +32,7 @@ export function InlineTOC({ items, ...props }: InlineTocProps) {
             <a
               key={item.url}
               href={item.url}
-              className="border-s py-1.5 hover:text-fd-accent-foreground"
+              className="py-1.5 hover:text-fd-accent-foreground"
               style={{
                 paddingInlineStart: 12 * Math.max(item.depth - 1, 0),
               }}

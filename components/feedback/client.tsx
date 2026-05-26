@@ -28,7 +28,7 @@ import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/cn';
 
 const rateButtonVariants = cva(
-  'inline-flex items-center gap-2 px-3 py-2 rounded-full font-medium border text-sm [&_svg]:size-4 disabled:cursor-not-allowed',
+  'inline-flex items-center gap-2 px-3 py-2 rounded-md font-medium text-sm [&_svg]:size-4 disabled:cursor-not-allowed',
   {
     variants: {
       active: {
@@ -94,7 +94,7 @@ export function Feedback({
       onOpenChange={(v) => {
         if (!v) setOpinion(null);
       }}
-      className="border-y py-3"
+      className="py-3"
     >
       <div className="flex flex-row items-center gap-2">
         <p className="text-sm font-medium pe-2">How is this guide?</p>
@@ -129,7 +129,7 @@ export function Feedback({
       </div>
       <CollapsibleContent className="mt-3">
         {previous ? (
-          <div className="px-3 py-6 flex flex-col items-center gap-3 bg-fd-card text-fd-muted-foreground text-sm text-center rounded-xl">
+          <div className="px-3 py-6 flex flex-col items-center gap-3 bg-fd-card text-fd-muted-foreground text-sm text-center rounded-md">
             <p>Thank you for your feedback!</p>
             <div className="flex flex-row items-center gap-2">
               <a
@@ -169,7 +169,7 @@ export function Feedback({
               required
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="border rounded-lg bg-fd-secondary text-fd-secondary-foreground p-3 resize-none focus-visible:outline-none placeholder:text-fd-muted-foreground"
+              className="rounded-md bg-fd-secondary text-fd-secondary-foreground p-3 resize-none focus-visible:outline-none placeholder:text-fd-muted-foreground"
               placeholder="Leave your feedback..."
               onKeyDown={(e) => {
                 if (!e.shiftKey && e.key === 'Enter') {
@@ -334,7 +334,7 @@ export function FeedbackText({ onSendAction, children }: FeedbackTextProps) {
         <div
           ref={refs.setFloating}
           className={cn(
-            'not-prose z-40 text-sm bg-fd-popover text-fd-popover-foreground border overflow-hidden shadow-lg rounded-xl w-30 h-9.5 box-content transition-[width,height]',
+            'not-prose z-40 text-sm bg-fd-popover text-fd-popover-foreground overflow-hidden rounded-md w-30 h-9.5 box-content transition-[width,height]',
             popup.mode === 'expanded' ? 'w-[300px] h-32 max-w-[98vw]' : 'select-none',
           )}
           style={floatingStyles}
@@ -462,7 +462,7 @@ function FeedbackTextForm({
         required
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        className="border rounded-lg bg-fd-secondary text-fd-secondary-foreground p-3 resize-none focus-visible:outline-none placeholder:text-fd-muted-foreground"
+        className="rounded-md bg-fd-secondary text-fd-secondary-foreground p-3 resize-none focus-visible:outline-none placeholder:text-fd-muted-foreground"
         placeholder="Leave your feedback..."
         onKeyDown={(e) => {
           if (!e.shiftKey && e.key === 'Enter') {

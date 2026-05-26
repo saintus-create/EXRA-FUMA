@@ -44,7 +44,7 @@ export function GraphView(props: GraphViewProps) {
   return (
     <div
       ref={ref}
-      className="relative border h-[600px] [&_canvas]:size-full rounded-xl overflow-hidden bg-fd-background"
+      className="relative h-[600px] [&_canvas]:size-full rounded-md overflow-hidden bg-fd-background"
     >
       {mount && <ClientOnly {...props} containerRef={ref} />}
     </div>
@@ -173,7 +173,7 @@ function ClientOnly({
       />
       {tooltip && (
         <div
-          className="absolute bg-fd-popover text-fd-popover-foreground size-fit p-2 border rounded-xl shadow-lg text-sm max-w-xs"
+          className="absolute bg-fd-popover text-fd-popover-foreground size-fit p-2 rounded-md text-sm max-w-xs"
           style={{ top: tooltip.y, left: tooltip.x }}
         >
           {tooltip.content}

@@ -50,18 +50,11 @@ export function CalloutContainer({
   return (
     <div
       className={cn(
-        'flex gap-2 my-4 rounded-xl bg-fd-card p-3 ps-1 text-sm text-fd-card-foreground shadow-md',
+        'flex gap-2 my-4 rounded-md bg-fd-card p-3 text-sm text-fd-card-foreground',
         className,
       )}
-      style={
-        {
-          '--callout-color': `var(--color-fd-${type}, var(--color-fd-muted))`,
-          ...style,
-        } as object
-      }
       {...props}
     >
-      <div role="none" className="w-0.5 bg-(--callout-color)/50 rounded-sm" />
       {icon ??
         {
           info: <Info className={iconClass} />,

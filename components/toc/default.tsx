@@ -59,7 +59,7 @@ export function TOCItems({ ref, className, ...props }: TOCItemsProps) {
       {computed && <TocThumb computed={computed} />}
       <div
         ref={mergeRefs(ref, containerRef)}
-        className={cn('flex flex-col border-s border-fd-foreground/10', className)}
+        className={cn('flex flex-col', className)}
         {...props}
       />
     </div>
@@ -105,7 +105,7 @@ export function TOCEmpty() {
   const t = useTranslations();
 
   return (
-    <div className="rounded-lg border bg-fd-card p-3 text-xs text-fd-muted-foreground">
+    <div className="rounded-md bg-fd-card p-3 text-xs text-fd-muted-foreground">
       {t.tocNoHeadings}
     </div>
   );

@@ -33,7 +33,7 @@ export function AISearchPanelHeader({ className, ...props }: ComponentProps<'div
   return (
     <div
       className={cn(
-        'sticky top-0 flex items-start gap-2 border rounded-xl bg-fd-secondary text-fd-secondary-foreground shadow-sm',
+        'sticky top-0 flex items-start gap-2 rounded-md bg-fd-secondary text-fd-secondary-foreground',
         className,
       )}
       {...props}
@@ -52,7 +52,7 @@ export function AISearchPanelHeader({ className, ...props }: ComponentProps<'div
           buttonVariants({
             size: 'icon-sm',
             color: 'ghost',
-            className: 'text-fd-muted-foreground rounded-full',
+            className: 'text-fd-muted-foreground rounded-md',
           }),
         )}
         onClick={() => setOpen(false)}
@@ -78,7 +78,7 @@ export function AISearchInputActions() {
             buttonVariants({
               color: 'secondary',
               size: 'sm',
-              className: 'rounded-full gap-1.5',
+              className: 'rounded-md gap-1.5',
             }),
           )}
           onClick={() => regenerate()}
@@ -93,7 +93,7 @@ export function AISearchInputActions() {
           buttonVariants({
             color: 'secondary',
             size: 'sm',
-            className: 'rounded-full',
+            className: 'rounded-md',
           }),
         )}
         onClick={() => setMessages([])}
@@ -162,7 +162,7 @@ export function AISearchInput(props: ComponentProps<'form'>) {
           className={cn(
             buttonVariants({
               color: 'secondary',
-              className: 'transition-all rounded-full mt-2 gap-2',
+              className: 'transition-all rounded-md mt-2 gap-2',
             }),
           )}
           onClick={stop}
@@ -177,7 +177,7 @@ export function AISearchInput(props: ComponentProps<'form'>) {
           className={cn(
             buttonVariants({
               color: 'primary',
-              className: 'transition-all rounded-full mt-2',
+              className: 'transition-all rounded-md mt-2',
             }),
           )}
           disabled={input.length === 0}
@@ -292,7 +292,7 @@ function Message({ message, ...props }: { message: ChatUIMessage } & ComponentPr
         return (
           <div
             key={call.toolCallId}
-            className="flex flex-row gap-2 items-center mt-3 rounded-lg border bg-fd-secondary text-fd-muted-foreground text-xs p-2"
+            className="flex flex-row gap-2 items-center mt-3 rounded-md bg-fd-secondary text-fd-muted-foreground text-xs p-2"
           >
             <SearchIcon className="size-4" />
             {call.state === 'output-error' || call.state === 'output-denied' ? (
@@ -333,7 +333,7 @@ export function AISearchTrigger({
       data-state={open ? 'open' : 'closed'}
       className={cn(
         position === 'float' && [
-          'fixed bottom-4 gap-3 w-24 inset-e-[calc(--spacing(4)+var(--removed-body-scroll-bar-size,0px))] shadow-lg z-20 transition-[translate,opacity]',
+          'fixed bottom-4 gap-3 w-24 inset-e-[calc(--spacing(4)+var(--removed-body-scroll-bar-size,0px))] z-20 transition-[translate,opacity]',
           open && 'translate-y-10 opacity-0',
         ],
         className,
@@ -384,8 +384,8 @@ export function AISearchPanel() {
         <div
           className={cn(
             'overflow-hidden z-30 bg-fd-card text-fd-card-foreground [--ai-chat-width:400px] 2xl:[--ai-chat-width:460px]',
-            'max-lg:fixed max-lg:inset-x-2 max-lg:inset-y-4 max-lg:border max-lg:rounded-2xl max-lg:shadow-xl',
-            'lg:sticky lg:top-0 lg:h-dvh lg:border-s lg:ms-auto lg:in-[#nd-docs-layout]:[grid-area:toc] lg:in-[#nd-notebook-layout]:row-span-full lg:in-[#nd-notebook-layout]:col-start-5',
+            'max-lg:fixed max-lg:inset-x-2 max-lg:inset-y-4 max-lg:rounded-md',
+            'lg:sticky lg:top-0 lg:h-dvh lg:ms-auto lg:in-[#nd-docs-layout]:[grid-area:toc] lg:in-[#nd-notebook-layout]:row-span-full lg:in-[#nd-notebook-layout]:col-start-5',
             open
               ? 'animate-fd-dialog-in lg:animate-[ask-ai-open_200ms]'
               : 'animate-fd-dialog-out lg:animate-[ask-ai-close_200ms]',
@@ -394,7 +394,7 @@ export function AISearchPanel() {
           <div className="flex flex-col size-full p-2 lg:p-3 lg:w-(--ai-chat-width)">
             <AISearchPanelHeader />
             <AISearchPanelList className="flex-1" />
-            <div className="rounded-xl border bg-fd-secondary text-fd-secondary-foreground shadow-sm has-focus-visible:shadow-md">
+            <div className="rounded-md bg-fd-secondary text-fd-secondary-foreground">
               <AISearchInput />
               <div className="flex items-center gap-1.5 p-1 empty:hidden">
                 <AISearchInputActions />
@@ -429,7 +429,7 @@ export function AISearchPanelList({ className, style, ...props }: ComponentProps
       ) : (
         <div className="flex flex-col px-3 gap-4">
           {chat.error && (
-            <div className="p-2 bg-fd-secondary text-fd-secondary-foreground border rounded-lg">
+            <div className="p-2 bg-fd-secondary text-fd-secondary-foreground rounded-md">
               <p className="text-xs text-fd-muted-foreground mb-1">
                 Request Failed: {chat.error.name}
               </p>

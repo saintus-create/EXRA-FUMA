@@ -168,9 +168,8 @@ export function TOCPopover({
         <header
           ref={ref}
           className={cn(
-            'border-b backdrop-blur-sm transition-colors',
+            'backdrop-blur-sm transition-colors',
             (!isNavTransparent || open) && 'bg-fd-background/80',
-            open && 'shadow-lg',
           )}
         >
           <PageTOCPopoverTrigger {...trigger} />

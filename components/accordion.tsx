@@ -49,7 +49,7 @@ export function Accordions({
       onValueChange={setValue}
       collapsible={type === 'single' ? true : undefined}
       className={cn(
-        'divide-y divide-fd-border overflow-hidden rounded-lg border bg-fd-card',
+        'divide-y overflow-hidden rounded-md bg-fd-card',
         className,
       )}
       {...props}

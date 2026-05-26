@@ -1,5 +1,6 @@
 {
   "title": "ADHD Safety Hub",
+  "icon": "Shield",
   "pages": [
     "index",
     "safety-data",

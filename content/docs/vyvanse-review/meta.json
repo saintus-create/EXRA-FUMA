@@ -1,5 +1,6 @@
 {
   "title": "Vyvanse Clinical Review",
+  "icon": "FileText",
   "pages": [
     "index",
     "recommendations",

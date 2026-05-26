@@ -102,11 +102,11 @@ function SidebarContent({ ref: refProp, className, children, ...props }: Compone
             data-hovered={collapsed && hovered}
             className={cn(
               'absolute flex flex-col w-full inset-s-0 inset-y-0 items-end text-sm duration-250 *:w-(--fd-sidebar-width)',
-              navMode === 'auto' && 'bg-fd-card border-e',
+              navMode === 'auto' && 'bg-fd-card',
               collapsed && [
-                'inset-y-2 rounded-xl bg-fd-card transition-transform border w-(--fd-sidebar-width)',
+                'inset-y-2 rounded-md bg-fd-card transition-transform w-(--fd-sidebar-width)',
                 hovered
-                  ? 'shadow-lg translate-x-2 rtl:-translate-x-2'
+                  ? 'translate-x-2 rtl:-translate-x-2'
                   : '-translate-x-(--fd-sidebar-width) rtl:translate-x-full',
               ],
               ref.current &&
@@ -135,7 +135,7 @@ function SidebarDrawer({
       <Base.SidebarDrawerOverlay className="fixed z-40 inset-0 backdrop-blur-xs data-[state=open]:animate-fd-fade-in data-[state=closed]:animate-fd-fade-out" />
       <Base.SidebarDrawerContent
         className={cn(
-          'fixed text-[0.9375rem] flex flex-col shadow-lg border-s inset-e-0 inset-y-0 w-[85%] max-w-[380px] z-40 bg-fd-background data-[state=open]:animate-fd-sidebar-in data-[state=closed]:animate-fd-sidebar-out',
+          'fixed text-[0.9375rem] flex flex-col inset-e-0 inset-y-0 w-[85%] max-w-[380px] z-40 bg-fd-background data-[state=open]:animate-fd-sidebar-in data-[state=closed]:animate-fd-sidebar-out',
           className,
         )}
         {...props}
@@ -247,7 +247,7 @@ function SidebarFolderContent({
       className={cn(
         'relative',
         depth === 1 &&
-          "before:content-[''] before:absolute before:w-px before:inset-y-1 before:bg-fd-border before:inset-s-2.5",
+          "before:content-[''] before:absolute before:w-px before:inset-y-1 before:bg-fd-muted before:inset-s-2.5",
         className,
       )}
       {...props}
@@ -402,7 +402,7 @@ export function Sidebar({ banner, footer, components, collapsible = true, ...res
         {viewport}
         {renderFooter({
           className: cn(
-            'hidden flex-row text-fd-muted-foreground items-center border-t p-4 pt-2 justify-end',
+            'hidden flex-row text-fd-muted-foreground items-center p-4 pt-2 justify-end',
             (slots.languageSelect || slots.themeSwitch) && 'flex',
             iconLinks.length > 0 && 'max-lg:flex',
           ),
@@ -480,7 +480,7 @@ function SidebarTabsDropdown({
         <PopoverTrigger
           {...props}
           className={cn(
-            'flex items-center gap-2 rounded-lg p-2 border bg-fd-secondary/50 text-start text-fd-secondary-foreground transition-colors hover:bg-fd-accent data-[state=open]:bg-fd-accent data-[state=open]:text-fd-accent-foreground',
+            'flex items-center gap-2 rounded-md p-2 bg-fd-secondary/50 text-start text-fd-secondary-foreground transition-colors hover:bg-fd-accent data-[state=open]:bg-fd-accent data-[state=open]:text-fd-accent-foreground',
             props.className,
           )}
         >

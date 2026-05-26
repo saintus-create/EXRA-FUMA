@@ -146,7 +146,7 @@ export function TOCEmpty() {
   const t = useTranslations();
 
   return (
-    <div className="rounded-lg border bg-fd-card p-3 text-xs text-fd-muted-foreground">
+    <div className="rounded-md bg-fd-card p-3 text-xs text-fd-muted-foreground">
       {t.tocNoHeadings}
     </div>
   );

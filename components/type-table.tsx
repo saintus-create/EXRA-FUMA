@@ -61,7 +61,7 @@ export function TypeTable({
     <div
       id={id}
       className={cn(
-        '@container flex flex-col p-1 bg-fd-card text-fd-card-foreground rounded-2xl border my-6 text-sm overflow-hidden',
+        '@container flex flex-col p-1 bg-fd-card text-fd-card-foreground rounded-md my-6 text-sm overflow-hidden',
         className,
       )}
       {...props}
@@ -117,8 +117,8 @@ function Item({
         setOpen(v);
       }}
       className={cn(
-        'rounded-xl border overflow-hidden scroll-m-20 transition-all',
-        open ? 'shadow-sm bg-fd-background not-last:mb-2' : 'border-transparent',
+        'rounded-md overflow-hidden scroll-m-20 transition-all',
+        open ? 'bg-fd-background not-last:mb-2' : '',
       )}
     >
       <CollapsibleTrigger className="relative flex flex-row items-center w-full group text-start px-3 py-2 not-prose hover:bg-fd-accent">
@@ -141,7 +141,7 @@ function Item({
         <ChevronDown className="absolute end-2 size-4 text-fd-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
       </CollapsibleTrigger>
       <CollapsibleContent>
-        <div className="grid grid-cols-[1fr_3fr] gap-y-4 text-sm p-3 overflow-auto fd-scroll-container border-t">
+        <div className="grid grid-cols-[1fr_3fr] gap-y-4 text-sm p-3 overflow-auto fd-scroll-container">
           <div className="text-sm prose col-span-full prose-no-margin empty:hidden">
             {description}
           </div>
